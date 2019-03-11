@@ -18,6 +18,7 @@ HELP.md
 *.iml
 *.ipr
 /out/
+.attach_pid*
 
 ### NetBeans ###
 /nbproject/private/
