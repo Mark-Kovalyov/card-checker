@@ -1,5 +1,8 @@
 package kovalev.cardchecker;
 
+/**
+ * Main service
+ */
 public class BankCardService {
 
     private static BankCardService bankCardService;
