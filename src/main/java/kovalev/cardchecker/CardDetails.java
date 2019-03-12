@@ -1,5 +1,8 @@
 package kovalev.cardchecker;
 
+/**
+ * CardDetails
+ */
 public class CardDetails {
 
     private String cardType;

@@ -1,5 +1,8 @@
 package kovalev.cardchecker;
 
+/**
+ * CheckResult
+ */
 public class CheckResult {
 
     private boolean isCorrect;
