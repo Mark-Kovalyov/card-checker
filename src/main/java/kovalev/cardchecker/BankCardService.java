@@ -8,7 +8,7 @@ public class BankCardService {
     private static BankCardService bankCardService;
 
     private BankCardService() {
-
+        // Singleton
     }
 
     public static BankCardService createInstance() {
