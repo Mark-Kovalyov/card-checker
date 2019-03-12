@@ -21,16 +21,18 @@ public class BankCardService {
      */
     public boolean check(String cardNumber) {
         if (cardNumber==null) throw new IllegalArgumentException("cardNumber cannot be null");
+        if (cardNumber.equals("")) throw new IllegalArgumentException("cardNumber cannot be empty");
         if (cardNumber.length()!=19) throw new IllegalArgumentException("cardNumber must be equals to ####-####-####-####");
         int pos = 0;
         int sum = 0;
         for (int i = 0; i < cardNumber.length(); i++) {
             int c = cardNumber.charAt(i);
-            if (c >= '0' && c <= '9') {
+            char cc = (char) c;
+            if (Character.isDigit(cc)) {
                 if ((pos & 1) == 0) {
                     int res = ((c - '0') << 1);
                     if (res >= 10) {
-                        sum += res %10;
+                        sum += res % 10;
                         sum++;
                     } else {
                         sum += res;
