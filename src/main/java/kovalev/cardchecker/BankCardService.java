@@ -15,6 +15,10 @@ public class BankCardService {
         return bankCardService;
     }
 
+    private int charToDigit(char c) {
+        return c - '0';
+    }
+
     /**
      * @param cardNumber in format XXXX-XXXX-XXXX-XXXX
      * @return
@@ -30,7 +34,7 @@ public class BankCardService {
             char cc = (char) c;
             if (Character.isDigit(cc)) {
                 if ((pos & 1) == 0) {
-                    int res = ((c - '0') << 1);
+                    int res = charToDigit(cc);
                     if (res >= 10) {
                         sum += res % 10;
                         sum++;
@@ -38,7 +42,7 @@ public class BankCardService {
                         sum += res;
                     }
                 } else {
-                    sum += (c - '0');
+                    sum += charToDigit(cc);
                 }
                 pos++;
             } else {
