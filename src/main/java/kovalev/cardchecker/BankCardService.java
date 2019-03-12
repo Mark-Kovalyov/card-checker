@@ -57,5 +57,9 @@ public class BankCardService {
         return sum % 10 == 0;
     }
 
+    public CardDetails decodeCardDetails(String card) {
+        return new CardDetails();
+    }
+
 
 }
